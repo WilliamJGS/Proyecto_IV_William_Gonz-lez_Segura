@@ -1,0 +1,44 @@
+doctype html
+html
+  head
+    title Inventario de productos
+    link(rel='stylesheet', href='/stylesheets/style-mid.css')
+    link(rel='stylesheet', href='/menu-navegacion.css')
+  body
+    header
+      nav.stylenav
+        ul
+          li: a(href="/principal") Inicio
+          li: a(href="/comprar") Comprar
+          li: a(href="/vender") Vender
+          li.dropdown
+            a(href="#") Administrar
+            ul.dropdown-menu
+              li.desplegable: a(href="/ingresar") Ingresar producto
+              li.desplegable: a(href="/modificar") Modificar producto
+              li.desplegable: a(href="/buscar") Buscar producto
+              li.desplegable: a(href="/eliminar") Eliminar producto
+
+
+    form(action="/abastecer_despensa" method="post")            
+      #panelTabla(style="z-index: 1; left: 282px; top: 289px; position: absolute; height: 434px; width: 808px")
+        table#GVProductos(style="background-color: White; border-color: #3366CC; border-style: none; border-width: 1px; padding: 4px; z-index: 1; left: 142px; top: 69px; position: absolute; height: 356px; width: 1148px")
+          tfoot(style="background-color: #99CCCC; color: #003399")
+          thead(style="background-color: #003399; font-weight: bold; color: #CCCCFF")
+          tfoot(style="background-color: #99CCCC; color: #003399")
+          tr(style="background-color: White; color: #003399")
+          tr(style="background-color: #009999; font-weight: bold; color: #CCFF99")
+          tr(style="background-color: #EDF6F6")
+          tr(style="background-color: #0D4AC4")
+          tr(style="background-color: #D6DFDF")
+          tr(style="background-color: #002876")
+        a(href="/tabla_productos",style="font-size: X-Large; z-index: 1; left: 657px; top: 4px; position: absolute") Ver productos
+
+      #panelInfo(style="z-index: 1; left: 813px; top: 82px; position: absolute; height: 183px; width: 407px")
+        label#Label2(style="z-index: 1; left: 74px; top: 20px; position: absolute; font-size: XX-Large") Abastecer producto
+        label#Label3(style="z-index: 1; left: 62px; top: 73px; position: absolute; font-size: Large") Nombre producto
+        input(Name="nombreProducto" type="text" style="z-index: 1; left: 63px; top: 95px; position: absolute; width: 113px; right: 231px; height: 20px;")
+        label#Label4(style="z-index: 1; left: 196px; top: 71px; position: absolute; font-size: Large") Cantidad a abastecer
+        input(Name="cantidadAbastecida" type="text" style="z-index: 1; left: 196px; top: 94px; position: absolute; width: 122px; right: 81px; height: 20px;")
+        input(type="submit" style="z-index: 1; left: 62px; top: 127px; position: absolute; width: 262px; margin-bottom: 0px;" value="Abastecer")
+        label#lblEstado(style="z-index: 1; left: 63px; top: 160px; position: absolute")

@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title Inventario de productos
+    link(rel='stylesheet', href='/menu-navegacion.css')
+  body
+    header
+      nav.stylenav
+        ul
+          li: a(href="/principal") Inicio
+          li: a(href="/comprar") Comprar
+          li: a(href="/vender") Vender
+          li.dropdown
+            a(href="#") Administrar
+            ul.dropdown-menu
+              li.desplegable: a(href="/ingresar") Ingresar producto
+              li.desplegable: a(href="/modificar") Modificar producto
+              li.desplegable: a(href="/buscar") Buscar producto
+              li.desplegable: a(href="/eliminar") Eliminar producto
+
+    form(action="/agregar_producto" method="post") 
+      #Panel1(style="z-index: 1; left: 695px; top: 94px; position: absolute; height: 469px; width: 691px")
+        label#Label1(style="z-index: 1; left: 233px; top: 15px; position: absolute; font-size: XX-Large") Vender producto
+        label#Label2(style="z-index: 1; left: 242px; top: 85px; position: absolute; font-size: X-Large") Nombre del producto
+        input#nombre(name="descripcion" type="text" style="z-index: 1; left: 242px; top: 201px; position: absolute; width: 200px;")
+        label#Label3(style="z-index: 1; left: 245px; top: 162px; position: absolute; font-size: X-Large") Descripción
+        input#descripcion(name="nombre" type="text" style="z-index: 1; left: 244px; top: 122px; position: absolute; width: 200px")
+        label#Label4(style="z-index: 1; left: 242px; top: 239px; position: absolute; font-size: X-Large") Cantidad
+        input#cantidad(name="precio" type="text" style="z-index: 1; left: 242px; top: 344px; position: absolute; width: 200px")
+        label#Label5(style="z-index: 1; left: 241px; top: 311px; position: absolute; font-size: X-Large") Precio
+        input#precio(name="cantidad" type="text" style="z-index: 1; left: 243px; top: 275px; position: absolute; width: 200px")
+        input(type="submit", value="Vender" style="z-index: 1; left: 241px; top: 450px; position: absolute; width: 212px") 
+        label#Label5(style="z-index: 1; left: 241px; top: 380px; position: absolute; font-size: X-Large") URL imagen
+        input#precio(name="imagenURL" type="text" style="z-index: 1; left: 243px; top: 420px; position: absolute; width: 200px")
+        label#lblEstado(style="z-index: 1; left: 258px; top: 423px; position: absolute")

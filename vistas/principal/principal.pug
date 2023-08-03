@@ -1,0 +1,45 @@
+doctype html
+html
+  head
+    title Inventario de productos
+    link(rel='stylesheet', href='/style-mid.css')
+    link(rel='stylesheet', href='/menu-navegacion.css')
+  body
+    header
+      nav.stylenav
+        ul
+          li: a(href="/principal") Inicio
+          li: a(href="/comprar") Comprar
+          li: a(href="/vender") Vender
+          li.dropdown
+            a(href="#") Administrar
+            ul.dropdown-menu
+              li.desplegable: a(href="/ingresar") Ingresar producto
+              li.desplegable: a(href="/modificar") Modificar producto
+              li.desplegable: a(href="/buscar") Buscar producto
+              li.desplegable: a(href="/eliminar") Eliminar producto
+    div.centrar 
+      h1 Inventario de productos 
+      p
+        | Este es el proyecto numero 4 de programacion lV
+        br
+        | Elementos utilizados en el proyecto:
+        br
+        br
+        | 1-Node.js
+        br
+        br
+        | 2-Bases de datos MongoDB
+        br
+        br
+        | 3-Express
+        br
+        br
+        | 4-Git
+        br
+        br
+        |  entre otros...
+        
+      a(href="/abastecer")  
+        button(type='button') Abastecer despensa
+        
